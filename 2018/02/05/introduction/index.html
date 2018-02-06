@@ -10,7 +10,7 @@
   
   <title>
     
-      介绍 | 书珆
+      介绍 | shuyi
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
   <div class="header-container">
     <a class="home-link" href="/">
       <div class="logo"></div>
-      <span>书珆</span>
+      <span>shuyi</span>
     </a>
     <ul class="right-list">
       
@@ -147,11 +147,16 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>Github + Hexo 搭建一个自己的博客<br>为Hexo添加博客时需要在终端输入命令hexo new post “Post title”，输入之后需要手动定位到source/_posts中的相关文件，这个目录比较深，定位比较麻烦，而_posts目录下可能有上百个文件，找到刚刚添加的那个也得费点劲，如果能在键入新建文章的命令之后能自动打开刚刚新建的文件，那样就方便多了。</p>
+    <section class="markdown-content"><p>Github + Hexo 搭建一个自己的博客
+为Hexo添加博客时需要在终端输入命令hexo new post &quot;Post title&quot;，输入之后需要手动定位到source/_posts中的相关文件，这个目录比较深，定位比较麻烦，而_posts目录下可能有上百个文件，找到刚刚添加的那个也得费点劲，如果能在键入新建文章的命令之后能自动打开刚刚新建的文件，那样就方便多了。</p>
 <p>GitHub上也有人也提出了同样的想法，Hexo的作者给出了一个解决方法，就是在Hexo博客的根目录下的scripts目录中新建一个JavaScript脚本（如果没有scripts目录则手动创建一个），在其中捕获new事件。</p>
 <p>我最喜欢的Markdown编辑器是MacDown，于是我在scripts目录下建立了一个名为macdown.js的文件，这个文件名可以随意起，内容如下：</p>
-<p>1<br>var exec = require(‘child_process’).exec;<br>hexo.on(‘new’, function(target){<br>        exec(‘open -a MacDown ‘ + target);<br>        });</p>
-<p>下面来测试一下~我在终端中输入hexo new post “open macdown when add a new post”，果然MacDown蹦了出来，太酷了！于是我就在蹦出的MacDown窗口中写下了这篇文章^_^</p>
+<p>1
+var exec = require('child_process').exec;
+hexo.on('new', function(target){
+exec('open -a MacDown ' + target);
+});</p>
+<p>下面来测试一下~我在终端中输入hexo new post &quot;open macdown when add a new post&quot;，果然MacDown蹦了出来，太酷了！于是我就在蹦出的MacDown窗口中写下了这篇文章^_^</p>
 <p>P.S. 据说在Hexo 3中这段代码还会有所不同，详见GitHub上的Issue，我现在用的还是Hexo 2.8，等更新了之后再实验一下。</p>
 </section>
     <!-- Tags START -->

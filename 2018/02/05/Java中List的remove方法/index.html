@@ -147,10 +147,20 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>今天被问到一个问题：<br>NumberList是一个存储数字的容器，以下代码执行后容器中的数字是什么？</p>
-<p>List<integer> numberlist = new ArrayList<integer>(5);</integer></integer></p>
-<p>numberlist.add(2);<br>numberlist.add(4);<br>numberlist.add(1);<br>numberlist.add(3);<br>numberlist.add(5);</p>
-<p>for (int i = 0; i &lt; numberlist.size(); ++i){<br>    Integer v = numberlist.get(i);<br>       if (v%2==0){<br>          numberlist.remove(v);<br>       }<br>}</p>
+    <section class="markdown-content"><p>今天被问到一个问题：
+NumberList是一个存储数字的容器，以下代码执行后容器中的数字是什么？</p>
+<p>List&lt;Integer&gt; numberlist = new ArrayList&lt;Integer&gt;(5);</p>
+<p>numberlist.add(2);
+numberlist.add(4);
+numberlist.add(1);
+numberlist.add(3);
+numberlist.add(5);</p>
+<p>for (int i = 0; i &lt; numberlist.size(); ++i){
+Integer v = numberlist.get(i);
+if (v%2==0){
+numberlist.remove(v);
+}
+}</p>
 <p>List的Remove方法在删除元素的时候总会保持下标连续。例如，删掉第一个元素的时候，后面的元素会依次往前覆盖。</p>
 <p>所以上面程序的结果便是：4 1 3 5</p>
 </section>
